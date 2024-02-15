@@ -1,0 +1,92 @@
+<html>
+    <head><title>International Money Transfer</title>
+        <style>
+            html,body
+            {
+                width:100%;
+                height:100%;
+                margin-left: 0%;
+                margin-top:0%;
+            }
+            div.admn
+            {
+                text-align: center;
+                background-color: #2E86C1;
+                color:#F7F9F9;
+                font-family: Courier New;
+                font-size: 20px;
+                padding:0.5%;
+            }
+            input[type="submit"],input[type="reset"]
+ {
+    background-color:#2E86C1;
+    color:#F7F9F9;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-family: Verdana;
+    outline:none;
+    padding-bottom: 2%;
+    cursor: pointer;
+    border:none;
+    font-size: 15px;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+ }
+ table
+ {
+ border:1px solid lightgrey;
+ margin-top: 2%;
+ box-shadow:0px 15px 10px -15px #111; 
+ color:#2C3E50;
+ font-family: Segoe UI;
+ border-radius: 5px;
+ padding: 1% 5% 1% 5%;
+ }
+ input[type="date"]
+ {
+     text-transform: uppercase;
+     font-family: segoe UI;
+     font-size: 13px;
+     padding-left: 22%;
+ }
+ input
+ {
+     padding:2%;
+     border:1px solid grey;
+     background-color:transparent;
+     border-radius: 2px;
+     color:black;
+     font-size: 15px;
+     font-family: Courier New;
+ }
+            </style>
+    </head>
+    <body>
+        
+        <div class="admn">International Money Transfer</div>
+      
+            <center> <table cellpadding="10">
+            <form action="{{url('/banks')}}" method="POST">
+                PLEASE ENSURE ALL FIELDS ARE COMPLETED
+                <tr><td>Beneficiary Bank Name</td><td><input type="text" name="Bank Name"></td>
+                    <td>Beneficiary Account Number</td><td><input type="text" name="Account Number"></td>
+                <td>Beneficiary Full Name</td><td><input type="text" name="Beneficiary Full Name"></td></tr>
+                <tr><td>Amount</td><td><input type="text" name="Amount"></td>
+                <td>Card Number</td><td><input type="text" name="Card Number"></td></tr> 
+                <tr><td>Pin</td><td><input type="password" name="ipin"></td>
+                <td>E-mail address</td><td><input type="text" name="email"></td></tr>  
+                <tr><td>Mobile</td><td><input type="text" name="mobile"></td>
+                <tr> 
+
+                  <th colspan="2"><br><br><input type="reset" value="SEND" name="SEND"></th>
+                <a href="C:/Users/chukwuka/Desktop/Bank/resources/veiws/Ibanking.zip/account/Fund%20transfer.html">SEND</a>
+</tr>
+        </table></center>
+    </body>
+    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
+              <script>
+                  CKEDITOR.replace( 'editor' );
+              </script>
+</html>
+?>
